@@ -7,16 +7,23 @@ const info=document.querySelector('#info')
 let h3=document.createElement('h3')
 btn.addEventListener('click',checkNumber)
 function checkNumber(){
-  
     if( isNaN(inp.value)){
         h3.innerHTML="It should be <b>NUMBER</b> "
         h3.className="text-success"
+        h3.style.marginLeft="66px"
         inpPart.prepend(h3)
+        numDiv.innerHTML=""
+       info.classList.remove('d-none')
+       info.classList.add('d-flex')
     }
     else if(inp.value==""){
       h3.innerHTML="You should enter <b>NUMBER</b> "
         h3.className="text-success"
+        h3.style.marginLeft="66px"
         inpPart.prepend(h3)
+        numDiv.innerHTML=""
+       info.classList.remove('d-none')
+       info.classList.add('d-flex')
     }
     else{
     h3.remove()
